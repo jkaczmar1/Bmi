@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <STYLE>
+        h1 { text-align:center; }
+        h2 { text-align:center; }
+        p { text-align:center; }
+        div { text-align:center; }
+        button { text-align:right; }
+        input { text-align:right; }
+        body { text-align:center; }
+ 
+     </STYLE>
+     <script>
+        function BMI()
+        {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            document.getElementById("wynik").innerHTML=((a/b**2)*10000).toFixed(3);
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>Oblicz swoje BMI</h1>  
+  <h2>==============================</h2>
+  <input type="text" id="a" value="0" dir="left">Tu podaj swoją wage</input><br>
+  <input type="text" id="b" value="0" dir="left">Tu podaj swoj wzrost</input>
+  <div id="wynik">TU BĘDZIE WYNIK</div>
+  <button onclick="BMI()">=</button>
+</body>
+</html>
